@@ -1,0 +1,504 @@
+
+
+/* I have tested this on Google chrome latest version i have used grids in this assignment to build the layout wwith 5 html semantic tags that is header footer aside nav and main 
+Also i have used flexbox inside grids to align items such as in navbar header footer  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+header{
+    overflow-y: hidden;
+}
+
+h1 a{
+    text-decoration: none;
+    color: rgba(245, 242, 242, 0.695);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+h1:hover{
+    text-shadow: 1px 1px 5px;
+    transform: scale(1.1);
+    transition: all ease-in 1s;
+
+}
+
+footer{
+    color: rgba(245, 242, 242, 0.695);
+    background-color: #212a31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    height: 20vh;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: center;
+    position: static;
+}
+
+
+h1 {
+    background-color: #212a31;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 400%;
+    text-align: center;
+  }
+
+nav ul li{
+    list-style: none;
+    padding: 8px 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+
+#wrapper{
+    display: flex;
+}
+
+
+nav ul li a{
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+}
+
+h1,nav a{
+    text-transform: uppercase;
+}
+
+#rest-main{
+    width: 90%;
+}
+
+#content{
+    /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 20px; */
+}
+
+nav{
+    background-color: #748d92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-left:2px solid black;
+    width: 13%
+    
+}
+
+#user-image{
+    border: 2px solid grey;
+    /* background-color: rgba(155, 147, 147, 0.497); */
+    width: 50%;
+    margin-right: 5%;
+    padding: 2%;
+    margin: 2%;
+    background-color: #748d925f;
+    overflow-y: hidden;
+
+}
+
+#user-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* border: 2px solid black; */
+    box-shadow: 3px 5px 30px  black;
+    filter: grayscale();
+
+}
+
+#user-image img:hover{
+    filter: none;
+    transform: scale(1.2);
+    transition: all ease-in 2s;
+}
+
+#info-about-user{
+    border: 1px solid black;
+    
+}
+
+#info-about-user-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-right: 5%;
+}
+
+#info-about-user-container #info-content h2{
+    margin-bottom: 2%;
+}
+
+hr {
+    margin-bottom: 2%;
+}
+
+/* About Page Css Starts Here */
+
+#cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-items{
+    color: rgba(245, 242, 242, 0.695);
+    width: 30%;
+    padding: 3%;
+    margin: 3%;
+    border-radius: 2em;
+    box-shadow: 3px 5px 5px grey;
+    background-color: #212a31;
+}
+
+.card-items:hover{
+    transform: scale(1.1);
+    transition: all ease-out 2s;
+}
+
+.card-items h2{
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+#about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS for interests page starts here */
+
+#cards-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#cards-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #212a31;
+    color: rgba(245, 242, 242, 0.695);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 10px grey;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+
+#cards-container h2{
+    margin-bottom: 3rem;
+}
+
+.interest-images{
+    height: 250px;
+    width: 250px;
+}
+
+.card:hover{
+    transform: translateX(2em);
+    transition: all ease 1s;
+    
+}
+
+/* Topic page Css Starts here */
+
+#topic-grid-container{
+    display: grid;
+    grid-template-columns: 20rem 1fr 12rem;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main navbar"
+    "footer-topic footer-topic footer-topic";
+    min-height: 130vh;
+}
+
+#topic-header{
+    grid-area: header;
+    
+}
+
+#topic-nav{
+    grid-area: navbar;
+    
+}
+
+#topic-main{
+    grid-area: main;
+}
+
+#topic-aside{
+    grid-area: sidebar;
+    background-color: #c4dff3c9;
+    border-right:2px solid black;
+}
+
+#topic-footer{
+    grid-area: footer-topic;
+    height: 15vh;
+}
+
+#aside-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+   
+}
+
+#aside-heading{
+    margin-bottom: 1rem;
+    margin-top: 5em;
+}
+
+
+#topic-nav{
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+    
+    /* nav ul li {
+        font-size: 15px;
+    }
+   */
+    #wrapper {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav {
+        width: 100%; 
+        height: auto;
+        border-left: none;
+        order: 1;
+        margin-bottom: 7%;
+    }
+
+    header {
+        order: 0; 
+        width: 100%;
+    }
+
+    main {
+        width: 100%; 
+        order: 2; 
+    }
+
+    #content {
+        flex-direction: column; 
+        align-items: center;
+        height: auto; 
+    }
+
+    #user-image {
+        width: 80%; 
+        margin: 2% 0;
+        padding: 5%;
+    }
+
+    #info-about-user-container {
+        width: 100%; 
+        margin-top: 2%;
+        padding: 10%;
+    }
+
+    footer {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    #navbar{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #info-about-user-container h2,p{
+        text-align: center;
+    }
+
+    h2{
+        margin-bottom: 2%;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+
+    /* Media Query for About Page */
+
+    #cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+        
+    }
+
+    .card-items{
+        width: 75%;
+        padding: 10%;
+        margin-bottom: 8%;
+        
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    #video{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+
+    #cards-grid{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+
+    }
+
+    .card{
+        width: 80%;
+        margin-bottom: 5%;
+    }
+    
+
+    /* Media Query for Topic Page */
+    #topic-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "navbar"
+            "sidebar"
+            "main"
+            "footer-topic";
+    }
+
+    
+
+    #topic-nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    #cards-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #aside-heading {
+        margin-top: 1rem;
+    }
+
+    #topic-nav{
+        margin-bottom: 5%;
+    }
+
+    #topic-aside{
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        padding: 10px;
+    }
+      
+}
+
+/* media query for tablet for Topic Pagee */
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    #topic-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "navbar"
+            "sidebar"
+            "main"
+            "footer-topic";
+    }
+
+    #topic-nav{
+        height: 70px;
+        margin-bottom: 3%;
+       
+        
+    }
+
+    #topic-aside{
+        border: 2px solid black;
+    }
+
+
+    #topic-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #cards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin: 2%;
+    }
+
+    #aside-heading {
+        margin-top: 1rem;
+    }
+}
